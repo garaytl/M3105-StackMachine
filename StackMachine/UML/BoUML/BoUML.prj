@@ -194,9 +194,8 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 128002 "BufferedReader"
-	private explicit_type ""
-	init_value "in"
+      attribute 128002 "in"
+	private explicit_type "BufferedReader"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -205,9 +204,8 @@ ${members}}
 	idl_decl ""
       end
 
-      attribute 128130 "PrintStream"
-	private explicit_type ""
-	init_value "out"
+      attribute 128130 "out"
+	private explicit_type "PrintStream"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
@@ -280,6 +278,16 @@ ${members}}
 	
 	
       end
+
+      attribute 134914 "err"
+	private explicit_type "PrintStream"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
     end
 
     class 134914 "Memory"
@@ -335,6 +343,45 @@ ${members}}
     end
 
     class 135426 "AdressOutOfBoundsException"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 135554 "Instruction"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 135682 "Program"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 135810 "InvalidParametersException"
       visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
