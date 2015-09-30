@@ -1,0 +1,8 @@
+window_sizes 1280 962 300 900 682 82
+show_stereotypes
+selected attribute_ref 128002 // BufferedReader
+open
+  class_ref 128002 // IO
+  class_ref 128130 // Machine
+end
+end
