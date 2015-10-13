@@ -2,21 +2,23 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 public class Machine
 {
-	private CPU cpu;
+	private CPUInterface cpu;
 	private Memory programMemory;
+	private StackInterface expStack;
+	private StackInterface callStack;
+	private IoInterface ioSystem;
 
-	public Machine(CPU cpu, Memory programMemory, Stack expStack, Stack callStack, IO ioSystem)
+	public Machine(CPUInterface cpu, MemoryInterface programMemory, StackInterface expStack, StackInterface callStack, IoInterface ioSystem)
 	{
 		super();
 		this.cpu = cpu;
-		this.programMemory = programMemory;
 		this.cpu.wireToProgramMemory(programMemory);
 		this.cpu.wireToExpStack(expStack);
 		this.cpu.wireToCallStack(callStack);
 		this.cpu.wireToIoSubsystem(ioSystem);
 	}
 
-	public void loadProgram(Program program) throws AddressOutOfBoundsException
+	public void loadProgram(Program program) 
 	{
 		int currentAddress = this.programMemory.getStartAddress();
 

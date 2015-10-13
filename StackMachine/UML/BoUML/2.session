@@ -1,8 +1,15 @@
 window_sizes 1280 962 300 900 682 82
+diagrams
+  active  classdiagram_ref 128002 // StackMachin
+    974 806 100 4 0 0
+end
 show_stereotypes
-selected attribute_ref 128002 // BufferedReader
+selected attribute_ref 142082 // expStack
 open
-  class_ref 128002 // IO
   class_ref 128130 // Machine
+  class_ref 128386 // CPU
+  class_ref 128258 // MachineLauncher
+  class_ref 128002 // IO
+  class_ref 135554 // Instruction
 end
 end

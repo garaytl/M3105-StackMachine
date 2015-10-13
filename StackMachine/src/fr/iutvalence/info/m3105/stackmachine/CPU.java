@@ -2,9 +2,14 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 import java.io.IOException;
 
-public class CPU
+public class CPU implements CPUInterface
 {
-
+	
+	private IoInterface ioSystem;
+	private StackInterface expStack;
+	private StackInterface callStack;
+	
+	
 	public final static int HALT 	= 0x00;
 	public final static int PUSH  	= 0x01;
 	public final static int ADD 	= 0x02;
@@ -30,6 +35,10 @@ public class CPU
 	
 	// TODO something is missing here...
 
+	/* (non-Javadoc)
+	 * @see fr.iutvalence.info.m3105.stackmachine.CPUInterface#run()
+	 */
+	@Override
 	public void run()
 	{
 		try
@@ -178,5 +187,51 @@ public class CPU
 		}		
 	}
 
-	// TODO something is missing here...
+	/* (non-Javadoc)
+	 * @see fr.iutvalence.info.m3105.stackmachine.CPUInterface#wireToProgramMemory(fr.iutvalence.info.m3105.stackmachine.Memory)
+	 */
+	@Override
+	public void wireToProgramMemory(MemoryInterface programMemory) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see fr.iutvalence.info.m3105.stackmachine.CPUInterface#wireToExpStack(fr.iutvalence.info.m3105.stackmachine.Stack)
+	 */
+	public void wireToExpStack(StackInterface expStack) 
+	{
+		this.expStack = expStack;
+	}
+
+	/* (non-Javadoc)
+	 * @see fr.iutvalence.info.m3105.stackmachine.CPUInterface#wireToCallStack(fr.iutvalence.info.m3105.stackmachine.Stack)
+	 */
+	public void wireToCallStack(StackInterface callStack) 
+	{
+		this.callStack = callStack ;
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see fr.iutvalence.info.m3105.stackmachine.CPUInterface#wireToIoSubsystem(fr.iutvalence.info.m3105.stackmachine.IoInterface)
+	 */
+	public void wireToIoSubsystem(IoInterface IOSystem) 
+	{
+		this.ioSystem = IOSystem;
+		
+	}
+
+	@Override
+	public void clearStacks() 
+	{
+		
+	}
+
+	@Override
+	public void setPC(int address) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

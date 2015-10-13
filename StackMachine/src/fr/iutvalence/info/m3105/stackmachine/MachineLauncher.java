@@ -49,9 +49,9 @@ public class MachineLauncher
 				};
 		Program program = new Program(instructions);
 		
-		Memory programMemory= null;
-		Stack expStack = null;
-		Stack callStack = null;
+		MemoryInterface programMemory = null;
+		StackInterface expStack = null;
+		StackInterface callStack = null;
 
 		try
 		{
@@ -64,8 +64,8 @@ public class MachineLauncher
 			// Safely ignore this error, which is not one
 		}
 		
-		IO ioSystem = new IO(System.in, System.out, System.err);
-		CPU cpu = new CPU();		
+		IoInterface ioSystem = new IO(System.in, System.out, System.err);
+		CPUInterface cpu = new CPU();		
 		Machine machine = new Machine(cpu, programMemory, expStack, callStack, ioSystem );
 		try
 		{

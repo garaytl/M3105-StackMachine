@@ -1,0 +1,15 @@
+window_sizes 1600 877 248 1246 600 82
+diagrams
+  active  classdiagram_ref 128002 // StackMachin
+    1346 721 100 4 0 0
+end
+show_stereotypes
+selected attribute_ref 128904 // instructions
+open
+  class_ref 128130 // Machine
+  class_ref 128386 // CPU
+  class_ref 134914 // Memory
+  class_ref 135042 // Stack
+  class_ref 135682 // Program
+end
+end
